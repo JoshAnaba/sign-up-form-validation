@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel='stylesheet' href='style.css'>
+
+</head>
+<body>
+
+  <section id="container">
+    <div id="text-div">
+      <h1>Learn to code by watching others</h1>
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p>
+    </div>
+    <div id="form-div">
+      <div><p><span>Try it free 7 days</span> then $20/mo. thereafter</p></div>
+    
+      <form name='regForm' id="regForm" onsubmit='return validate()'>
+        <div>
+          <input type="text" name='firstName' id='f-name' placeholder='First Name'>
+          <svg id='svg-fn' width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="9"/><rect fill="#FFF" x="11" y="6" width="2" height="8" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+        </div>
+        <span id="error-f-name"></span>
+  
+        <div>
+          <input type="text" name='lastName' id='l-name' placeholder='Last Name'>
+          <svg id='svg-ln' width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="9"/><rect fill="#FFF" x="11" y="6" width="2" height="8" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+        </div>
+        <span id="error-l-name"></span>
+  
+        <div>
+          <input type="email" name='yourEmail' id='email' placeholder='Email Address'>
+          <svg id='svg-em' width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="9"/><rect fill="#FFF" x="11" y="6" width="2" height="8" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+        </div>
+        <span id="error-email"></span>
+  
+        <div>
+          <input type="password"name='yourPassword' id='password' placeholder='Password'>
+          <svg id='svg-pw' width="24" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><circle fill="#FF7979" cx="12" cy="12" r="9"/><rect fill="#FFF" x="11" y="6" width="2" height="8" rx="1"/><rect fill="#FFF" x="11" y="17" width="2" height="2" rx="1"/></g></svg>
+        </div>
+        <span id="error-pw"></span>
+  
+        
+          <input type="submit" id='submit-btn' value='CLAIM YOUR FREE TRIAL'>
+        
+  
+        <p>By clicking the buttons you are agreeing to our <span>Terms and Services</span></p>
+  
+      </form>
+    </div>
+    
+  </section>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Josh Anaba</a>.
+    </p>
+  </footer>
+
+
+  <script type='text/javascript' src="script.js"></script>
+</body>
+</html>

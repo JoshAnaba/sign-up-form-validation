@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@mixin bg($val){
+    @if $val == bgRed{
+        background-color: hsl(0, 100%, 74%);
+    }
+    @else if $val == bgGreen{
+        background-color:  hsl(154, 59%, 51%);
+    }
+    @else if $val == bgBlue{
+        background-color: hsl(248, 32%, 49%);
+    }
+    @else if $val == bgDarkBlue{
+        background-color: hsl(249, 10%, 26%);
+    }
+    @else if $val == bgGreyBlue{
+        background-color: hsl(246, 25%, 77%);
+    }
+}
+
+@mixin fw($b){
+    @if $b == sm{
+        font-weight: 400;
+    }
+    @else if $b == md{
+        font-weight: 500;
+    }
+    @else if $b == lg{
+        font-weight: 600;
+    }
+    @else if $b == xl{
+        font-weight: 700;
+    }
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #EEF2F7;
+}
+
+#container{
+    margin: auto;
+    margin-top: 30px;
+    background-image: url(./images/bg-intro-desktop.png);
+    @include bg(bgRed);
+    background-size: cover;
+    width: 1200px;
+    height: 630px;
+    display: flex;
+    flex-direction: row;
+    padding: 60px 100px;
+    justify-content: space-between;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+
+    #text-div{
+        color:#fff;
+        width: 50%; 
+        margin-right: 20px;
+        align-self: center;
+        h1{
+        font-size: 40px;
+        line-height: 50px;
+        }   
+        p{
+            line-height: 27px;
+            font-size: 14px;
+        }    
+    }
+
+    #form-div{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-left: 20px;
+       >div{
+            @include bg(bgBlue);
+            border-radius: 6px;
+            margin-bottom: 20px;
+            padding:3px;
+            text-align: center;
+            color: rgb(205, 204, 204);
+            box-shadow: 0px 12px 5px -6px rgb(58, 58, 58);
+            span{
+                color: #fff;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            height: 430px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 8px 6px -6px black;
+            
+            div{
+                border: 1px solid grey;
+                padding: 0;
+                border-radius: 3px;
+                display: flex;
+                align-items: center;
+                svg{
+                    display: none;
+                }
+            }
+
+            #error-f-name,#error-l-name,#error-email,#error-pw{
+                color: red;
+               align-self: flex-end;
+               font-size: 10px;
+            }
+
+            div>input:focus{
+                box-shadow: 0 0 3pt 1pt black;
+            }
+
+            div>input{
+                width: 90%;               
+            }
+            input{
+                height: 48px;
+                width: 100%;
+                padding-left: 20px;
+                @include fw(xl);
+                border: none;
+                outline: none;
+            }
+            input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    box-shadow: 0 0 0 30px white inset !important;
+}
+
+            input[type='submit']{
+                @include bg(bgGreen);
+                color: white;
+                border:none;
+                border-radius: 5px;
+                height: 50px;
+                box-shadow:0px 10px 6px -6px gray;
+                @include fw(lg);
+                cursor: pointer;
+            }
+
+            input[type='submit']:hover{
+                opacity: 0.8;
+             }
+
+            p{
+                text-align: center;
+                font-size: 10px;
+                color: rgb(31, 31, 31);
+            }
+            p span{
+                color: red;
+            }
+
+            p span:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 500px){
+    #container{
+        flex-direction: column;
+        background: url('./images/bg-intro-mobile.png');
+        @include bg(bgRed);
+        background-size: cover;
+        align-items: center;
+        width: 350px;
+        height: auto;
+        padding: 30px;
+        text-align: center;
+        padding-bottom: 80px;
+        #text-div{
+            width: 100%;
+            margin: 10px 0px 30px 0px;
+            p{
+                font-size: 15px;
+            }
+
+            h1{
+                font-size: 27px;
+                line-height: 42px;
+            }
+        }
+
+        #form-div{
+            width: 100%;
+            margin: 0px;
+
+           >div{
+                padding: 0px;
+                font-size: 15px;
+            }
+
+            #form{
+                padding: 20px;
+
+                input{
+                    border: 1px solid rgb(196, 196, 196);
+                }
+            }
+        }
+    }
+}
+
+footer{
+    text-align: center;
+}

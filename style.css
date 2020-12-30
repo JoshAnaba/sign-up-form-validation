@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background-color: #EEF2F7;
+}
+
+#container {
+  margin: auto;
+  margin-top: 30px;
+  background-image: url(./images/bg-intro-desktop.png);
+  background-color: #ff7a7a;
+  background-size: cover;
+  width: 1200px;
+  height: 630px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 60px 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+#container #text-div {
+  color: #fff;
+  width: 50%;
+  margin-right: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#container #text-div h1 {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+#container #text-div p {
+  line-height: 27px;
+  font-size: 14px;
+}
+
+#container #form-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  margin-left: 20px;
+}
+
+#container #form-div > div {
+  background-color: #6055a5;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 3px;
+  text-align: center;
+  color: #cdcccc;
+  -webkit-box-shadow: 0px 12px 5px -6px #3a3a3a;
+          box-shadow: 0px 12px 5px -6px #3a3a3a;
+}
+
+#container #form-div > div span {
+  color: #fff;
+}
+
+#container #form-div form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px;
+  height: 430px;
+  background-color: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
+}
+
+#container #form-div form div {
+  border: 1px solid grey;
+  padding: 0;
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#container #form-div form div svg {
+  display: none;
+}
+
+#container #form-div form #error-f-name, #container #form-div form #error-l-name, #container #form-div form #error-email, #container #form-div form #error-pw {
+  color: red;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 10px;
+}
+
+#container #form-div form div > input:focus {
+  -webkit-box-shadow: 0 0 3pt 1pt black;
+          box-shadow: 0 0 3pt 1pt black;
+}
+
+#container #form-div form div > input {
+  width: 90%;
+}
+
+#container #form-div form input {
+  height: 48px;
+  width: 100%;
+  padding-left: 20px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
+
+#container #form-div form input:-webkit-autofill,
+#container #form-div form input:-webkit-autofill:hover,
+#container #form-div form input:-webkit-autofill:focus,
+#container #form-div form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+          box-shadow: 0 0 0 30px white inset !important;
+}
+
+#container #form-div form input[type='submit'] {
+  background-color: #38cc8c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 50px;
+  -webkit-box-shadow: 0px 10px 6px -6px gray;
+          box-shadow: 0px 10px 6px -6px gray;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#container #form-div form input[type='submit']:hover {
+  opacity: 0.8;
+}
+
+#container #form-div form p {
+  text-align: center;
+  font-size: 10px;
+  color: #1f1f1f;
+}
+
+#container #form-div form p span {
+  color: red;
+}
+
+#container #form-div form p span:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  #container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: url("./images/bg-intro-mobile.png");
+    background-color: #ff7a7a;
+    background-size: cover;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 350px;
+    height: auto;
+    padding: 30px;
+    text-align: center;
+    padding-bottom: 80px;
+  }
+  #container #text-div {
+    width: 100%;
+    margin: 10px 0px 30px 0px;
+  }
+  #container #text-div p {
+    font-size: 15px;
+  }
+  #container #text-div h1 {
+    font-size: 27px;
+    line-height: 42px;
+  }
+  #container #form-div {
+    width: 100%;
+    margin: 0px;
+  }
+  #container #form-div > div {
+    padding: 0px;
+    font-size: 15px;
+  }
+  #container #form-div #form {
+    padding: 20px;
+  }
+  #container #form-div #form input {
+    border: 1px solid #c4c4c4;
+  }
+}
+
+footer {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
